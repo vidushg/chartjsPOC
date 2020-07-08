@@ -1,8 +1,8 @@
 {
  "labels": "Scatter",
-  "datasets": [
+ "datasets": [
     {
-      "label": "My First dataset",
+      "label": "ChartJS Proof of Concept",
       "fill": "false",
       "backgroundColor": "rgba(75,192,192,0.4)",
       "pointBorderColor": "rgba(36,3,3,1)",
@@ -15,14 +15,25 @@
       "pointRadius": "1",
       "pointHitRadius": "10",
       "data": [
-        { "x": "65", "y": "75" },
-        { "x": "29", "y": "49" },
-        { "x": "20", "y": "90" },
-        { "x": "21", "y": "29" },
-        { "x": "56", "y": "36" },
-        { "x": "55", "y": "25" },
-        { "x": "40", "y": "18" }
+        { "x": "65", "y": "75", "toolTip":"Hi" },
+        { "x": "29", "y": "49", "toolTip":"Hi2" },
+        { "x": "20", "y": "90", "toolTip":"Hi3" },
+        { "x": "21", "y": "29", "toolTip":"Hi4" },
+        { "x": "56", "y": "36", "toolTip":"Hi5" },
+        { "x": "55", "y": "25", "toolTip":"Hi6" },
+        { "x": "40", "y": "18" , "toolTip":"Hi7"}
       ]
     }
-  ]
+  ],
+ "options": {
+            "title":{
+              "display":"true",
+              "text":"ChartJS",
+              "fontSize":"20"
+            },
+            "legend":{
+              "display":"true",
+              "position":"right"
+            }
+          }
 }

@@ -17,9 +17,41 @@ const IndexPage = () => {
 const data = {
 
 labels: JSONData.labels,
-datasets: JSONData.datasets
+datasets: JSONData.datasets,
+tooltips: {
+    mode: 'label',
+    callbacks: {
+
+        title: function(tooltipItem, data) {
+            return 'Tooltip';
+        },
+
+        
+        label: function(tooltipItem, data) {
+            return 'Data: ' + tooltipItem.value+' '+tooltipItem.index;
+        },
+    },
+}
+}
+const options =  {
+tooltips: {
+    mode: 'label',
+    callbacks: {
+
+        title: function(tooltipItem, data) {
+            return 'Tooltip';
+        },
+
+        
+        label: function(tooltipItem, data) {
+            return 'Data: ' + JSONData.datasets[0].data[tooltipItem.index].toolTip+' '+tooltipItem.index;
+        },
+    },
+}
+
 
 }
+
 
 const dataOG = {
  labels: ['Scatter'],
@@ -50,17 +82,7 @@ const dataOG = {
   ]
 };
 
-const element = <div id='root'><Scatter data={data} options={{
-            title:{
-              display:true,
-              text:'Average Rainfall per month',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            }
-          }} /></div> ;
+const element = <div id='root'><Scatter data={data} options = {options} /></div> ;
 
 
 	return element
