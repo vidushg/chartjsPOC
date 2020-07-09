@@ -1,12 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import ReactDOM from 'react-dom'
 
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import {Chart, canvas} from "chart.js"
 import {Line, Scatter} from "react-chartjs-2"
 import JSONData from "../content/data.json"
 
@@ -58,8 +51,9 @@ tooltips: {
     },
 }
 
-
 }
+
+
 
 
 
